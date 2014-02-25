@@ -35,4 +35,13 @@ class Complejo {
 	 real = real + v.real;
 	 imaginario = imaginario + v.imaginario;
  }
+ 
+ public void suma(double re, double im) {
+	  real = real + re;
+	  imaginario = imaginario + im;
+	}
+	 
+	public void suma(double re) {
+	  real = real + re;
+	}
 }
