@@ -3,11 +3,21 @@ package org.example.mislugares;
 public class Lugar {
        private String nombre;
        private String direccion;
+       private TipoLugar tipo;
+
     
-    @Override
+    public TipoLugar getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(TipoLugar tipo) {
+		this.tipo = tipo;
+	}
+
+	@Override
 	public String toString() {
 		return "Lugar [nombre=" + nombre + ", direccion=" + direccion
-				+ ", posicion=" + posicion + ", foto=" + foto + ", telefono="
+				+ ", tipo=" + tipo + ", posicion=" + posicion + ", foto=" + foto + ", telefono="
 				+ telefono + ", url=" + url + ", comentario=" + comentario
 				+ ", fecha=" + fecha + ", valoracion=" + valoracion + "]";
 	}
@@ -22,7 +32,7 @@ public class Lugar {
        private float valoracion;
 
        public Lugar(String nombre, String direccion, double longitud,
-             double latitud, int telefono, String url, String comentario,
+             double latitud, TipoLugar tipo, int telefono, String url, String comentario,
              int valoracion) {
              fecha = System.currentTimeMillis();
              posicion = new GeoPunto(longitud, latitud);
@@ -32,6 +42,7 @@ public class Lugar {
              this.url = url;
              this.comentario = comentario;
              this.valoracion = valoracion;
+             this.tipo = tipo;
        }
 
 	public String getNombre() {
