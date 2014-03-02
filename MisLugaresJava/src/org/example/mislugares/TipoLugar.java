@@ -1,3 +1,4 @@
+package org.example.mislugares;
 public enum TipoLugar {
             OTROS("Otros", 5),
             RESTAURANTE("Restaurante", 2),
