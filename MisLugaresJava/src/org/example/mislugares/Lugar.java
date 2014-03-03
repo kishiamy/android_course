@@ -116,4 +116,10 @@ public class Lugar {
              this.comentario = comentario;
              this.valoracion = valoracion;
        }
+       
+       public Lugar() {
+           fecha = System.currentTimeMillis();
+           posicion = new GeoPunto(0, 0);
+           tipo = TipoLugar.OTROS;
+     }
 }

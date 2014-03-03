@@ -18,13 +18,7 @@ public class Lugares {
 
        static void anyade(Lugar lugar){
              vectorLugares.add(lugar);
-       }
-       
-       public Lugar() {
-           fecha = System.currentTimeMillis();
-           posicion = new GeoPunto(0, 0);
-           tipo = TipoLugar.OTROS;
-     }
+       } 
 
        static int nuevo(){
              Lugar lugar = new Lugar();
